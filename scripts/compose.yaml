@@ -1,0 +1,38 @@
+name: kerp-shipping
+services:
+  traefik:
+    image: traefik:3.3
+    pull_policy: 'always'
+    restart: 'unless-stopped'
+    command: --api.insecure=true --providers.docker
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  kerp_shipping:
+    image: 'ghcr.io/impressdesigns/knights-apparel-kerp-shipping:latest'
+    pull_policy: 'always'
+    restart: 'unless-stopped'
+    env_file:
+      - 'kerp-shipping.env'
+    depends_on:
+      postgres17:
+        condition: service_healthy
+    labels:
+      - "traefik.http.routers.kerp_shipping.rule=Host(`kerp-shipping.docker.localhost`)"
+
+  postgres17:
+    image: postgres:17
+    pull_policy: 'always'
+    restart: 'unless-stopped'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: shadow
+      POSTGRES_DB: kerp_shipping
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
