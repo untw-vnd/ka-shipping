@@ -15,7 +15,7 @@ updates:
           - "*"
 
   - package-ecosystem: "npm"
-    directory: "/docs"
+    directory: "/"
     schedule:
       interval: "monthly"
     groups:
