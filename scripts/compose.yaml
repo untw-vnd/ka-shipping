@@ -12,7 +12,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
 
   kerp_shipping:
-    image: 'ghcr.io/impressdesigns/knights-apparel-kerp-shipping:latest'
+    image: 'ghcr.io/idi-untw/kerp-shipping:edge'
     pull_policy: 'always'
     restart: 'unless-stopped'
     env_file:
