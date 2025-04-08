@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
 
       - name: Copy scripts into site
-        run: cp scripts/kerp-shipping.ps1 scripts/compose.yaml docs/static
+        run: cp scripts/kerp-shipping.ps1 scripts/compose.yaml static/
 
       - name: Setup Node.js
         uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e # v4.3.0
