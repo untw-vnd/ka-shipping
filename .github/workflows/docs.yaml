@@ -23,6 +23,7 @@ jobs:
         with:
           node-version: latest
           cache: npm
+          cache-dependency-path: site/package-lock.json
 
       - name: Install dependencies
         run: cd site; npm ci
