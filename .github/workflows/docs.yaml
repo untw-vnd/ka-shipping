@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
 
       - name: Copy scripts into site
-        run: cp scripts/kerp-shipping.ps1 scripts/compose.yaml static/
+        run: cp scripts/kerp-shipping.ps1 scripts/compose.yaml site/static/
 
       - name: Setup Node.js
         uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e # v4.3.0
@@ -25,15 +25,15 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: cd site; npm ci
 
       - name: Build website
-        run: npm run build
+        run: cd site; npm run build
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
         with:
-          path: build
+          path: site/build
 
   deploy:
     if: ${{ github.ref == 'refs/heads/main' }}

@@ -10,7 +10,7 @@ updates:
           - "*"
 
   - package-ecosystem: "npm"
-    directory: "/"
+    directory: "site/"
     schedule:
       interval: "monthly"
     groups:
