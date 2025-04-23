@@ -10,7 +10,7 @@ const config: Config = {
   favicon: "img/favicon.ico",
 
   url: "https://idi-untw.github.io",
-  baseUrl: "/kerp-shipping-docs/",
+  baseUrl: "/ka-shipping/",
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
