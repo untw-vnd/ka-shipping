@@ -21,7 +21,7 @@ Add-LocalGroupMember -Group "docker-users" -Member "your-username"
 
 ## Run the management script in setup mode
 
-<a href="/kerp-shipping-docs/kerp-shipping.ps1" download>Click here to download the script</a>
+<a href="/ka-shipping/kerp-shipping.ps1" download>Click here to download the script</a>
 
 Run the script and follow all prompts:
 
