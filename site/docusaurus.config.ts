@@ -9,7 +9,7 @@ const config: Config = {
   tagline: "K-ERP Shipping",
   favicon: "img/favicon.ico",
 
-  url: "https://idi-untw.github.io",
+  url: "https://untw-vnd.github.io",
   baseUrl: "/ka-shipping/",
 
   onBrokenLinks: "throw",

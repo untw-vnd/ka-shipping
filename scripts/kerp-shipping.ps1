@@ -23,7 +23,7 @@ $envKeys = "KAEXTRNL_DATABASE_URL", "FEDEX_ACCOUNT", "FEDEX_CLIENT_ID", "FEDEX_C
 function Sync-ComposeFile {
     try {
         Write-Host "Syncing Compose file"
-        Invoke-WebRequest -Uri "https://idi-untw.github.io/ka-shipping/compose.yaml" -OutFile "$configFolder\compose.yaml"
+        Invoke-WebRequest -Uri "https://untw-vnd.github.io/ka-shipping/compose.yaml" -OutFile "$configFolder\compose.yaml"
     }
     catch {
         Write-Error "Failed to sync compose.yaml: $_"
