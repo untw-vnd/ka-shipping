@@ -33,7 +33,7 @@ cd Downloads
 
 ## Access the application
 
-Open a web browser and navigate to http://kerp-shipping.docker.localhost to access the application.
+Open a web browser and navigate to http://kassistant.docker.localhost to access the application.
 
 ## Configure the application
 

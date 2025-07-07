@@ -34,7 +34,7 @@ function Sync-ComposeFile {
 function Sync-Containers {
     try {
         Write-Host "Syncing containers"
-        docker compose --file "$configFolder\compose.yaml" up --detach
+        docker compose --file "$configFolder\compose.yaml" up --detach --remove-orphans
     }
     catch {
         Write-Error "Failed to sync containers: $_"

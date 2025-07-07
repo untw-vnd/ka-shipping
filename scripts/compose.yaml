@@ -11,7 +11,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 
-  kerp_shipping:
+  kassistant:
     image: 'ghcr.io/untw-vnd/ka-kassistant:latest'
     pull_policy: 'always'
     restart: 'unless-stopped'
@@ -21,7 +21,7 @@ services:
       postgres17:
         condition: service_healthy
     labels:
-      - "traefik.http.routers.kerp_shipping.rule=Host(`kerp-shipping.docker.localhost`)"
+      - "traefik.http.routers.kerp_shipping.rule=Host(`kassistant.docker.localhost`)"
 
   postgres17:
     image: postgres:17
