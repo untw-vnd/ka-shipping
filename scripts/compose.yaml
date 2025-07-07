@@ -12,7 +12,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
 
   kerp_shipping:
-    image: 'ghcr.io/untw-vnd/ka-shippy:0.6.0'
+    image: 'ghcr.io/untw-vnd/ka-kassistant:latest'
     pull_policy: 'always'
     restart: 'unless-stopped'
     env_file:
