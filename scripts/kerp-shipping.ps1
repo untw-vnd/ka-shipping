@@ -17,8 +17,8 @@ param(
 )
 
 $configFolder = "C:\knights-apparel"
-$envFile = "kerp-shipping.env"
-$envKeys = "KAEXTRNL_DATABASE_URL", "FEDEX_ACCOUNT", "FEDEX_CLIENT_ID", "FEDEX_CLIENT_SECRET"
+$envFile = "kassistant.env"
+$envKeys = "KERP_API_KEY", "FEDEX_ACCOUNT", "FEDEX_CLIENT_ID", "FEDEX_CLIENT_SECRET"
 
 function Sync-ComposeFile {
     try {
