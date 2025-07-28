@@ -16,7 +16,7 @@ https://docs.docker.com/desktop/install/windows-install/
 https://learn.microsoft.com/en-us/troubleshoot/developer/visualstudio/ide/troubleshooting-docker-errors#docker-users-group
 
 ```powershell
-Add-LocalGroupMember -Group "docker-users" -Member "your-username"
+Add-LocalGroupMember -Group "docker-users" -Member "BUILTIN\Users"
 ```
 
 ## Run the management script in setup mode
